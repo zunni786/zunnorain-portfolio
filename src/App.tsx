@@ -7,8 +7,6 @@ import CaseStudies from './pages/CaseStudies';
 import Results from './pages/Results';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-
-
 export default function App() {
   return (
     <Router>
