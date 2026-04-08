@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center space-y-0">
           <span className="text-2xl font-display font-bold text-white tracking-tighter">
-            ZUNNORAIN ALI
+            ZUNNORAIN AHMAD
           </span>
         </Link>
 
