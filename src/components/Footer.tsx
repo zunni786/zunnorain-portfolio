@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Linkedin, Phone, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, Phone, ArrowUpRight, Facebook, Instagram } from 'lucide-react';
 import { BRAND, NAVIGATION } from '@/src/constants';
 
 export default function Footer() {
@@ -15,10 +15,16 @@ export default function Footer() {
               Premium SEO Outreach & Link Building for SaaS, AI tools, and growth-focused B2B brands.
             </p>
             <div className="flex space-x-4">
-              <a href={BRAND.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-white/10 transition-colors">
+              <a href="https://www.facebook.com/zunnorainrajpoot7" target="_blank" rel="noreferrer" className="social-icon">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/zunnorainrajpoot7/" target="_blank" rel="noreferrer" className="social-icon">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href={BRAND.linkedin} target="_blank" rel="noreferrer" className="social-icon">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href={`mailto:${BRAND.email}`} className="w-10 h-10 rounded-full glass-panel flex items-center justify-center hover:bg-white/10 transition-colors">
+              <a href={`mailto:${BRAND.email}`} className="social-icon">
                 <Mail className="w-5 h-5" />
               </a>
             </div>

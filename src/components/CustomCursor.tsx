@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, useMotionValue, useSpring } from 'motion/react';
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const x = useMotionValue(-100);
+  const y = useMotionValue(-100);
+  const xSpring = useSpring(x, { stiffness: 300, damping: 28 });
+  const ySpring = useSpring(y, { stiffness: 300, damping: 28 });
   const [visible, setVisible] = useState(false);
   const [active, setActive] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      setPosition({ x: event.clientX, y: event.clientY });
+      x.set(event.clientX - 18);
+      y.set(event.clientY - 18);
       setVisible(true);
     };
 
@@ -34,18 +38,17 @@ export default function CustomCursor() {
       document.removeEventListener('mouseover', handleHoverState);
       document.removeEventListener('mouseout', handleMouseOut);
     };
-  }, []);
+  }, [x, y]);
 
   return (
     <motion.div
       className="custom-cursor fixed top-0 left-0 z-[9999] pointer-events-none"
+      style={{ x: xSpring, y: ySpring }}
       animate={{
-        x: position.x - 18,
-        y: position.y - 18,
         scale: active ? 1.35 : 1,
         opacity: visible ? 1 : 0,
       }}
-      transition={{ type: 'spring', stiffness: 250, damping: 24 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 28 }}
     >
       <div className="cursor-ring" />
       <div className="cursor-dot" />

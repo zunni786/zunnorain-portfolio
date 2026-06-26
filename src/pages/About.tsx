@@ -73,11 +73,17 @@ export default function About() {
               <div className="absolute inset-0 rounded-[2.5rem] border border-white/10 bg-white/5 shadow-[0_40px_120px_rgba(15,23,42,0.5)]" />
               <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 shadow-2xl shadow-slate-950/40">
                 <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20" />
-                <img
-                  src="/profile.png"
-                  alt="Portrait of Zunnorain Ali"
-                  className="relative h-full w-full object-cover"
-                />
+                <picture>
+                  <source srcSet="/profile.avif" type="image/avif" />
+                  <source srcSet="/profile.webp" type="image/webp" />
+                  <img
+                    src="/profile.png"
+                    alt="Portrait of Zunnorain Ali"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative h-full w-full object-cover"
+                  />
+                </picture>
               </div>
 
               <div className="absolute -top-6 right-6 glass-panel rounded-3xl px-5 py-4 w-56 border-white/10 shadow-xl shadow-slate-950/30">

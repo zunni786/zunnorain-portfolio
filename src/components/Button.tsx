@@ -1,6 +1,6 @@
-import { motion } from 'motion/react';
+import { motion, useMotionValue, useSpring } from 'motion/react';
 import { cn } from '@/src/lib/utils';
-import { ButtonHTMLAttributes, ReactNode, useState } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -16,7 +16,15 @@ export default function Button({
   className, 
   ...props 
 }: ButtonProps) {
-  const [magnet, setMagnet] = useState({ x: 0, y: 0 });
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const scaleX = useMotionValue(1);
+  const scaleY = useMotionValue(1);
+
+  const xSpring = useSpring(x, { stiffness: 280, damping: 26 });
+  const ySpring = useSpring(y, { stiffness: 280, damping: 26 });
+  const scaleXSpring = useSpring(scaleX, { stiffness: 280, damping: 26 });
+  const scaleYSpring = useSpring(scaleY, { stiffness: 280, damping: 26 });
 
   const variants = {
     primary: "brand-gradient text-white shadow-2xl shadow-[#d4af37]/20 hover:shadow-[#d4af37]/40",
@@ -33,16 +41,27 @@ export default function Button({
 
   const handlePointerMove = (event: React.PointerEvent<HTMLButtonElement>) => {
     const target = event.currentTarget.getBoundingClientRect();
-    const x = ((event.clientX - (target.left + target.width / 2)) / target.width) * 10;
-    const y = ((event.clientY - (target.top + target.height / 2)) / target.height) * 8;
-    setMagnet({ x, y });
+    const xOffset = ((event.clientX - (target.left + target.width / 2)) / target.width) * 12;
+    const yOffset = ((event.clientY - (target.top + target.height / 2)) / target.height) * 8;
+
+    x.set(xOffset);
+    y.set(yOffset);
+
+    const stretch = Math.min(0.08, Math.abs(xOffset) / 220 + Math.abs(yOffset) / 180);
+    scaleX.set(1 + stretch);
+    scaleY.set(1 - stretch * 0.18);
   };
 
-  const resetMagnet = () => setMagnet({ x: 0, y: 0 });
+  const resetMagnet = () => {
+    x.set(0);
+    y.set(0);
+    scaleX.set(1);
+    scaleY.set(1);
+  };
 
   return (
     <motion.button
-      animate={{ x: magnet.x, y: magnet.y }}
+      style={{ x: xSpring, y: ySpring, scaleX: scaleXSpring, scaleY: scaleYSpring, transformStyle: 'preserve-3d' }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       onPointerMove={handlePointerMove}

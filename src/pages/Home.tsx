@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Globe, Zap, ExternalLink } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Globe, Zap, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BRAND, SERVICES, RESULTS_STATS, PLACEMENTS, TESTIMONIALS, FAQS, CERTIFICATIONS } from '@/src/constants';
 import Button from '@/src/components/Button';
@@ -100,6 +100,19 @@ export default function Home() {
                   <span className="text-sm font-medium">Growth Driven</span>
                 </div>
               </motion.div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-8">
+                <a href="https://www.facebook.com/zunnorainrajpoot7" target="_blank" rel="noreferrer" className="social-icon">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://www.instagram.com/zunnorainrajpoot7/" target="_blank" rel="noreferrer" className="social-icon">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href={BRAND.linkedin} target="_blank" rel="noreferrer" className="social-icon">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <span className="text-sm text-slate-500">Connect on social media for the latest project updates.</span>
+              </div>
             </motion.div>
 
             {/* Right Portrait Panel */}
@@ -111,11 +124,17 @@ export default function Home() {
             >
               <div className="absolute inset-0 rounded-[2.5rem] border border-[#d4af37]/15 bg-black/40 shadow-[0_40px_120px_rgba(0,0,0,0.35)]" />
               <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d4af37]/15 bg-white/5 shadow-2xl shadow-black/50">
-                <img
-                  src="/profile.png"
-                  alt="Portrait of Zunnorain Ali"
-                  className="relative h-full w-full object-cover"
-                />
+                <picture>
+                  <source srcSet="/profile.avif" type="image/avif" />
+                  <source srcSet="/profile.webp" type="image/webp" />
+                  <img
+                    src="/profile.png"
+                    alt="Portrait of Zunnorain Ali"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative h-full w-full object-cover"
+                  />
+                </picture>
               </div>
               <div className="absolute -top-6 right-6 glass-panel rounded-3xl px-5 py-4 w-56 border-[#d4af37]/20 shadow-xl shadow-black/20">
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Featured Skill</p>
@@ -131,20 +150,6 @@ export default function Home() {
       </section>
 
       {/* Certifications Strip */}
-      <section className="container mx-auto px-6">
-        <GlassCard hover={false} className="py-12 border-white/5">
-          <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10">
-            Certified At
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            {['Semrush', 'Coursera', 'HubSpot', 'AIChief', 'Ahrefs'].map((brand) => (
-              <span key={brand} className="text-xl md:text-2xl font-display font-bold text-white tracking-tighter">
-                {brand}
-              </span>
-            ))}
-          </div>
-        </GlassCard>
-      </section>
       <section className="container mx-auto px-6">
         <GlassCard hover={false} className="py-12 border-white/5">
           <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10">

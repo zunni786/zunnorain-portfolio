@@ -16,13 +16,14 @@ export default function GlassCard({ children, className, hover = true, delay = 0
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={hover ? { y: -5, scale: 1.01 } : undefined}
+      transition={{ duration: 0.55, delay }}
+      whileHover={hover ? { y: -6, scale: 1.01, rotateX: 0.4, rotateY: 0.4 } : undefined}
       className={cn(
         "glass-panel rounded-2xl p-6 transition-all duration-300",
         hover && "hover:border-white/20 hover:shadow-brand-primary/10 hover:shadow-2xl",
         className
       )}
+      style={{ transformStyle: 'preserve-3d', backfaceVisibility: 'hidden' }}
     >
       {children}
     </motion.div>
