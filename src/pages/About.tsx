@@ -12,9 +12,9 @@ export default function About() {
       {/* Intro */}
       <section className="relative overflow-hidden py-24">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
-        <div className="absolute top-16 left-10 w-72 h-72 rounded-full bg-blue-500/10 blur-3xl" />
-        <div className="absolute bottom-12 right-12 w-96 h-96 rounded-full bg-indigo-500/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,255,255,0.08)_0%,transparent_40%)]" />
+        <div className="absolute top-16 left-10 w-72 h-72 rounded-full bg-[#d4af37]/10 blur-3xl" />
+        <div className="absolute bottom-12 right-12 w-96 h-96 rounded-full bg-[#f5d376]/10 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(212,175,55,0.14)_0%,transparent_40%)]" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.95fr] gap-12 items-center">
             <motion.div
@@ -30,19 +30,19 @@ export default function About() {
                 Founder-led digital experiences with a premium product mindset.
               </h1>
               <p className="max-w-xl text-lg text-slate-300 leading-relaxed">
-                I’m Zunnorain Ahmad — a founder, product strategist, and designer who builds luxury digital brands for SaaS, AI, and high-growth startups.
+                I’m Zunnorain Ali — a founder, product strategist, and designer who builds luxury digital brands for SaaS, AI, and high-growth startups.
               </p>
               <p className="max-w-xl text-slate-400 leading-relaxed">
                 My work blends thoughtful strategy with polished execution, delivering interfaces that feel refined, purposeful, and built to convert.
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-lg shadow-blue-500/25">
+                <Button size="lg" className="bg-gradient-to-r from-[#d4af37] via-[#f5d376] to-[#f8e7a4] hover:from-[#c7a443] hover:to-[#f2d57e] shadow-lg shadow-[#d4af37]/25">
                   Work With Me <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <a
                   href={`mailto:${BRAND.email}`}
-                  className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-2xl border border-[#d4af37]/20 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-white/10"
                 >
                   Say Hello
                 </a>
@@ -75,7 +75,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20" />
                 <img
                   src="/profile.png"
-                  alt="Portrait of Zunnorain Ahmad"
+                  alt="Portrait of Zunnorain Ali"
                   className="relative h-full w-full object-cover"
                 />
               </div>

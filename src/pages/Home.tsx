@@ -13,13 +13,13 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background with subtle gradients */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.08)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.12)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(245,211,118,0.08)_0%,transparent_50%)]" />
 
         {/* Floating background elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/3 via-transparent to-indigo-500/3 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#d4af37]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#f5d376]/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[#d4af37]/10 via-transparent to-[#f5d376]/10 rounded-full blur-3xl" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
@@ -34,9 +34,9 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border-white/10 text-blue-300 text-sm font-medium backdrop-blur-md"
+                className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border-[#d4af37]/20 text-[#f8e7a4] text-sm font-medium backdrop-blur-md"
               >
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+                <div className="w-2 h-2 bg-[#d4af37] rounded-full animate-pulse" />
                 <span>Premium SEO Growth Partner</span>
               </motion.div>
 
@@ -44,10 +44,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
               >
                 Scale Your Authority With{' '}
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#d4af37] via-[#f5d376] to-[#f8e7a4] bg-clip-text text-transparent">
                   Elite
                 </span>{' '}
                 SEO Outreach
@@ -69,7 +69,7 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg shadow-blue-500/25">
+                  <Button size="lg" className="bg-gradient-to-r from-[#d4af37] via-[#f5d376] to-[#f8e7a4] hover:from-[#c7a443] hover:to-[#f2d57e] shadow-lg shadow-[#d4af37]/20">
                     Book a Strategy Call <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
@@ -88,135 +88,63 @@ export default function Home() {
                 className="flex flex-wrap gap-6 pt-8"
               >
                 <div className="flex items-center space-x-2 text-slate-400">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#d4af37]" />
                   <span className="text-sm font-medium">White-hat Execution</span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-400">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#d4af37]" />
                   <span className="text-sm font-medium">SaaS & AI Focused</span>
                 </div>
                 <div className="flex items-center space-x-2 text-slate-400">
-                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <CheckCircle2 className="w-4 h-4 text-[#d4af37]" />
                   <span className="text-sm font-medium">Growth Driven</span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Right Dashboard Cards */}
+            {/* Right Portrait Panel */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative"
             >
-              {/* Main Analytics Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="glass-panel rounded-3xl p-8 border-white/10 shadow-2xl shadow-blue-500/10 mb-6 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-2xl" />
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg font-semibold text-white">Domain Authority</h3>
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                  </div>
-                  <div className="flex items-end space-x-2 mb-4">
-                    <span className="text-4xl font-bold text-white">87</span>
-                    <span className="text-green-400 text-sm font-medium mb-1">+12</span>
-                  </div>
-                  <div className="w-full bg-slate-700/50 rounded-full h-2 mb-4">
-                    <div className="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full w-[87%]" />
-                  </div>
-                  <p className="text-slate-400 text-sm">Target: 95+ in 6 months</p>
-                </div>
-              </motion.div>
-
-              {/* Performance Metrics Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  className="glass-panel rounded-2xl p-6 border-white/5 shadow-lg"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <TrendingUp className="w-5 h-5 text-blue-400" />
-                    <span className="text-green-400 text-xs font-medium">+24%</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">2.4K</div>
-                  <p className="text-slate-400 text-xs">Organic Traffic</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.8 }}
-                  className="glass-panel rounded-2xl p-6 border-white/5 shadow-lg"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <Globe className="w-5 h-5 text-indigo-400" />
-                    <span className="text-blue-400 text-xs font-medium">+8</span>
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">156</div>
-                  <p className="text-slate-400 text-xs">Backlinks</p>
-                </motion.div>
+              <div className="absolute inset-0 rounded-[2.5rem] border border-[#d4af37]/15 bg-black/40 shadow-[0_40px_120px_rgba(0,0,0,0.35)]" />
+              <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d4af37]/15 bg-white/5 shadow-2xl shadow-black/50">
+                <img
+                  src="/profile.png"
+                  alt="Portrait of Zunnorain Ali"
+                  className="relative h-full w-full object-cover"
+                />
               </div>
-
-              {/* Chart Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                className="glass-panel rounded-3xl p-8 border-white/10 shadow-xl relative overflow-hidden"
-              >
-                <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-indigo-500/10 to-transparent rounded-full blur-2xl" />
-                <div className="relative z-10">
-                  <h3 className="text-lg font-semibold text-white mb-6">Growth Trajectory</h3>
-                  <div className="flex items-end justify-between h-24 mb-4">
-                    {[40, 55, 45, 70, 85, 95].map((height, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ height: 0 }}
-                        animate={{ height: `${height}%` }}
-                        transition={{ duration: 0.8, delay: 1 + i * 0.1 }}
-                        className="bg-gradient-to-t from-blue-500 to-indigo-400 rounded-t w-8 relative"
-                      >
-                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs text-slate-400">
-                          {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'][i]}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                  <div className="flex justify-between text-xs text-slate-500">
-                    <span>6 Months</span>
-                    <span className="text-green-400">+127% Growth</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating Status Card */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute -top-4 -right-4 glass-panel rounded-2xl p-4 border-white/5 shadow-lg w-48"
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                  <div>
-                    <p className="text-white text-sm font-medium">Campaign Active</p>
-                    <p className="text-slate-400 text-xs">3 outreach projects</p>
-                  </div>
-                </div>
-              </motion.div>
+              <div className="absolute -top-6 right-6 glass-panel rounded-3xl px-5 py-4 w-56 border-[#d4af37]/20 shadow-xl shadow-black/20">
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Featured Skill</p>
+                <p className="mt-3 text-sm font-semibold text-white">Strategic Product Design</p>
+              </div>
+              <div className="absolute bottom-8 left-6 glass-panel rounded-3xl px-5 py-4 w-52 border-[#d4af37]/20 shadow-xl shadow-black/20">
+                <div className="text-3xl font-bold text-white">87</div>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Portfolio Score</p>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Certifications Strip */}
+      <section className="container mx-auto px-6">
+        <GlassCard hover={false} className="py-12 border-white/5">
+          <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10">
+            Certified At
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            {['Semrush', 'Coursera', 'HubSpot', 'AIChief', 'Ahrefs'].map((brand) => (
+              <span key={brand} className="text-xl md:text-2xl font-display font-bold text-white tracking-tighter">
+                {brand}
+              </span>
+            ))}
+          </div>
+        </GlassCard>
+      </section>
       <section className="container mx-auto px-6">
         <GlassCard hover={false} className="py-12 border-white/5">
           <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10">

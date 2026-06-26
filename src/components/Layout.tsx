@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import BackgroundGlow from './BackgroundGlow';
+import CustomCursor from './CustomCursor';
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="relative min-h-screen flex flex-col">
       <BackgroundGlow />
+      <CustomCursor />
       <Navbar />
       <main className="flex-grow pt-24">
         <AnimatePresence mode="wait">
