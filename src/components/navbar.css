@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 50px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-btn.active {
+  color: #000;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.pill {
+  position: absolute;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+  top: 12px;
+}
+
+[data-theme='light'] body {
+  background: #f0f0f0;
+}
